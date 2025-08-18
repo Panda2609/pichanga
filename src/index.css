@@ -1,3 +1,32 @@
+
+/* Paleta 1: Verde césped y gris minimalista */
+:root {
+  --primary-1: #2e7d32;      /* Verde césped */
+  --secondary-1: #cfd8dc;    /* Gris claro */
+  --accent-1: #388e3c;       /* Verde oscuro */
+  --background-1: #f5f5f5;   /* Fondo neutro */
+  --text-1: #212121;         /* Texto oscuro */
+  
+}
+
+/* Paleta 2: Azul profundo y blanco deportivo */
+:root {
+  --primary-2: #1565c0;      /* Azul profundo */
+  --secondary-2: #ffffff;    /* Blanco puro */
+  --accent-2: #90caf9;       /* Azul claro */
+  --background-2: #f4f6f8;   /* Fondo gris muy claro */
+  --text-2: #263238;         /* Texto gris oscuro */
+}
+
+/* Paleta 3: Gris oscuro y verde lima deportiva */
+:root {
+  --primary-3: #263238;      /* Gris oscuro */
+  --secondary-3: #b2ff59;    /* Verde lima */
+  --accent-3: #8bc34a;       /* Verde medio */
+  --background-3: #eceff1;   /* Fondo gris claro */
+  --text-3: #263238;         /* Texto gris oscuro */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +40,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+  --rounded-corner: .8rem;
+}
+

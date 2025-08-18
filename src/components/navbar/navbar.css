@@ -1,0 +1,49 @@
+/* Navbar autolayout con Flexbox */
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	background-color: var(--primary-1); /* Usando la paleta de colores */
+	color: var(--text-1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.navbar-logo h1 {
+	margin: 0;
+	font-size: 1.8rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+    color: var(--secondary-1);
+}
+
+.navbar-links {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-links li {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-links a {
+	color: var(--secondary-1);
+	text-decoration: none;
+	font-size: 1.2rem;
+	transition: color 0.2s;
+    padding: .8rem;
+    font-weight: 600;
+    border-radius: var(--rounded-corner);
+    padding: .8rem;
+}
+
+.navbar-links a:hover {
+    background-color: var(--accent-1);
+    color: var(--secondary-1);
+    border-radius: var(--rounded-corner);
+    /* border: 1px solid var(--accent-1); */
+}
