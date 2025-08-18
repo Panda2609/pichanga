@@ -39,6 +39,7 @@
     font-weight: 600;
     border-radius: var(--rounded-corner);
     padding: .8rem;
+    cursor: pointer;
 }
 
 .navbar-links a:hover {

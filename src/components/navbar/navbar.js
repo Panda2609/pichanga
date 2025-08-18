@@ -1,6 +1,6 @@
 import './navbar.css'
 
-function Navbar() {
+function Navbar({ onLoginClick }) {
   return (
     <nav className="navbar-container">
       <div className="navbar-logo">
@@ -8,7 +8,11 @@ function Navbar() {
       </div>
       <ul className="navbar-links">
         <li><a href="#">Contactanos</a></li>
-        <li><a href="#">Login</a></li>
+        <li>
+            <a onClick={onLoginClick}>
+            Login
+            </a>
+        </li>
       </ul>
     </nav>
   );
