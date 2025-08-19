@@ -1,24 +1,24 @@
-.login-form {
+.register-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
 }
 
-.login-form h2 {
+.register-form h2 {
   margin-bottom: 1rem;
   font-size: 1.3rem;
   text-align: center;
 }
 
-.login-form input {
+.register-form input {
   padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
 }
 
-.login-form button {
+.register-form button {
   padding: 0.7rem;
   background: var(--primary-1, #2e7d32);
   color: #fff;
@@ -29,7 +29,7 @@
   transition: background 0.2s;
 }
 
-.login-form button:hover {
+.register-form button:hover {
   background: var(--accent-1, #388e3c);
 }
 

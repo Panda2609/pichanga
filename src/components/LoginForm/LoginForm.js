@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 
-function LoginForm({ onLogin }) {
+function LoginForm({ onLogin, onShowRegister }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -29,6 +29,9 @@ function LoginForm({ onLogin }) {
         required
       />
       <button type="submit">Entrar</button>
+      <hr className='divider'/>
+      <p className='question'>¿No tienes una cuenta?</p>
+      <button type="button" onClick={onShowRegister}>Regístrate</button>
     </form>
   );
 }
