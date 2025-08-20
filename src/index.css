@@ -42,6 +42,7 @@ code {
 }
 
 :root{
-  --rounded-corner: .8rem;
+  --rounded-corner: 0.8rem;
+  --rounded-corner-filter: 10rem;
 }
 

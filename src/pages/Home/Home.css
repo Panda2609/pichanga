@@ -1,0 +1,42 @@
+.home-container {
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--rounded-corner);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 80%;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-1);
+  margin: 0;
+}
+
+.filters-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.results-section {
+  min-height: 100px;
+  text-align: center;
+  color: #888;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-title{
+    color:var(--primary-1, #2e7d32);
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}

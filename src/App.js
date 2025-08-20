@@ -1,6 +1,7 @@
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import React, { useState } from 'react';
 
 import Navbar from './components/navbar/navbar';
@@ -8,7 +9,7 @@ import  Modal from './components/Modal/Modal';
 import LoginForm from './components/LoginForm/LoginForm';
 import InProgress from './components/InProgress/InProgress';
 import RegisterForm from './components/RegisterForm/RegisterForm';
-
+import Home from './pages/Home/Home';
 
 function App() {
   // Estados para el modal
@@ -40,13 +41,12 @@ function App() {
       <Modal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)}>
         <InProgress />
       </Modal>
-      {/* <Routes> */}
-        {/* Aqui van las rutas, por ejemplo: */}
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} /> */}
-      {/* </Routes> */}
+      <BrowserRouter>
+        <Routes>
+          {/* Aqui van las rutas, por ejemplo: */}
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
