@@ -1,0 +1,33 @@
+.cancha-info-container{
+    background-color: var(--secondary-1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancha-img{
+    width: 100%;
+    max-width: auto;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.cancha-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text-1);
+}
+
+.cancha-region,
+.cancha-type,
+.cancha-time,
+.cancha-date {
+    font-size: 1rem;
+    color: var(--text-2);
+    /* margin: 0.25rem 0; */
+}

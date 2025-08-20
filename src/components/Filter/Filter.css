@@ -2,7 +2,6 @@
     background: var(--secondary-1, #cfd8dc);
     padding: 3rem;
     border-radius: var(--rounded-corner-filter);
-
 }
 
 .filter-form{
@@ -20,7 +19,6 @@
     font-size: 1.1rem;
     font-weight: 600;
     gap: .8rem;
-
 }
 
 .filter-select, .filter-input {
@@ -32,10 +30,11 @@
     font-size: 1.1rem;
     font-weight: 500;
     border: 2px solid #ccc;
+    background-color: #fff;
 }
 
 .filter-button{
-    background-color: var(--primary-1, #1976d2);
+    background-color: var(--primary-1);
     color: #fff;
     padding: 0.5rem 2rem;
     border: none;
