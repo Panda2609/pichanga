@@ -1,19 +1,25 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import './Filter.css';
-import FilterData from '../../data/filter-data'
+import { getRegiones } from '../../api/regionesService';
+import { getTiposCancha } from '../../api/tiposCanchaService';
 
-function Filter({onFiltrar}) {
-
+function Filter({ onFiltrar }) {
     const [region, setRegion] = useState('');
     const [tipoCancha, setTipoCancha] = useState('');
     const [horario, setHorario] = useState('');
     const [fecha, setFecha] = useState('');
-    // Extraer las regiones y tipos de canchas del archivo de datos
-    const Regiones = FilterData.Regiones;
-    const TiposCanchas = FilterData.TiposCanchas;
+    const [regiones, setRegiones] = useState([]);
+    const [tiposCanchas, setTiposCanchas] = useState([]);
 
+    useEffect(() => {
+        getRegiones().then(data => setRegiones(data)).catch(() => setRegiones([]));
+        getTiposCancha().then(data => setTiposCanchas(data)).catch(() => setTiposCanchas([]));
+    }, []);
+
+    // console.log('Regiones:', regiones);
+    // console.log('Tipos de Canchas:', tiposCanchas);
     const handleFilter = () => {
-        if(typeof onFiltrar === 'function'){
+        if (typeof onFiltrar === 'function') {
             onFiltrar({
                 region,
                 tipoCancha,
@@ -30,10 +36,9 @@ function Filter({onFiltrar}) {
                     Región:
                     <select className='filter-select' value={region} onChange={(e) => setRegion(e.target.value)}>
                         <option value="">Seleccione una región</option>
-                        {console.log(FilterData.Regiones)}
-                         {Regiones.map((region) => (
-                            <option key={region.value} value={region.value}>
-                                {region.label}
+                        {regiones.map((region) => (
+                            <option key={region.id || region.value} value={region.id || region.value}>
+                                {region.nombre || region.label}
                             </option>
                         ))}
                     </select>
@@ -42,9 +47,9 @@ function Filter({onFiltrar}) {
                     Tipo de Cancha:
                     <select className='filter-select' value={tipoCancha} onChange={(e) => setTipoCancha(e.target.value)}>
                         <option value="">Seleccione una cancha</option>
-                        {TiposCanchas.map((tipo) => (
-                            <option key={tipo.value} value={tipo.value}>
-                                {tipo.label}
+                        {tiposCanchas.map((tipo) => (
+                            <option key={tipo.id || tipo.value} value={tipo.id || tipo.value}>
+                                {tipo.nombre || tipo.label}
                             </option>
                         ))}
                     </select>
