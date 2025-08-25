@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 import Navbar from './components/navbar/navbar';
-import  Modal from './components/Modal/Modal';
+import Modal from './components/Modal/Modal';
 import LoginForm from './components/LoginForm/LoginForm';
 import InProgress from './components/InProgress/InProgress';
 import RegisterForm from './components/RegisterForm/RegisterForm';

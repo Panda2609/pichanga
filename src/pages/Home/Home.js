@@ -1,28 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 
 import Filter from '../../components/Filter/Filter';
 import CanchaCard from '../../components/CanchaCard/CanchaCard';
-import DataCancha from '../../data/canchas-data';
+import { getCanchas } from '../../api/canchasService';
 
 function Home() {
-    const [results, setResults] = React.useState([]);
+    const [results, setResults] = useState([]);
+    const [canchas, setCanchas] = useState([]);
+
     const handleFiltrar = (filtros) => {
-        const filteredData = DataCancha.filter((cancha) => {
+        const filteredData = canchas.filter((cancha) => {
             return (
                 (!filtros.region || cancha.region === filtros.region) &&
-                (!filtros.tipoCancha || cancha.tipo === filtros.tipoCancha) &&
-                (!filtros.horario || cancha.horario === filtros.horario) &&
-                (!filtros.fecha || cancha.fecha === filtros.fecha)
+                (!filtros.tipoCancha || cancha.tipo === filtros.tipoCancha)
             );
         });
         setResults(filteredData);
     };
-    // const Canchas = DataCancha;
-    // React.useEffect(() => {
-    //     // Simulación de carga de datos
-    //     setResults(Canchas);
-    // }, [Canchas]);
+
+    useEffect(() => {
+        getCanchas()
+            .then(data => {
+                setCanchas(data);
+                setResults(data); // Mostrar todas al inicio
+            })
+            .catch(() => {
+                setCanchas([]);
+                setResults([]);
+            });
+    }, []);
 
     return (
         <div className="home-container">

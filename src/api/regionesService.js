@@ -4,7 +4,7 @@ export async function getRegiones() {
   const res = await fetch(`${API_URL}/api/regiones`);
   if (!res.ok) throw new Error('Error al obtener regiones');
   const data = await res.json();
-  console.log("data:", data);
+//   console.log("data:", data);
   return data;
 }
 
