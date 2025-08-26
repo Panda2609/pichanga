@@ -4,30 +4,39 @@
     border-radius: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;    
     justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cancha-info-details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* justify-content: start; */
+    gap: 0.5rem;
 }
 
 .cancha-img{
     width: 100%;
-    max-width: auto;
-    height: auto;
+    max-width: 400px;
+    /* height: auto; */
+    height: 200px;
     border-radius: 1rem;
     object-fit: cover;
+    background: #eee;
+    display: block;
 }
 
 .cancha-title{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--text-1);
 }
 
-.cancha-region,
-.cancha-type,
-.cancha-time,
-.cancha-date {
+.cancha-info-item{
     font-size: 1rem;
     color: var(--text-2);
-    /* margin: 0.25rem 0; */
+    margin: 0;
 }
