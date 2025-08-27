@@ -5,7 +5,9 @@
   --secondary-1: #cfd8dc;    /* Gris claro */
   --accent-1: #388e3c;       /* Verde oscuro */
   --background-1: #f5f5f5;   /* Fondo neutro */
+  --background-white: #fafafa;  /* Blanco suave para resaltar */
   --text-1: #212121;         /* Texto oscuro */
+  --background-softwhite: #f0f0f0; /* Blanco más oscuro, neutro */
   
 }
 

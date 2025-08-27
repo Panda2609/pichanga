@@ -16,7 +16,6 @@
     vertical-align: middle;
 }
 .cancha-info-container {
-    /* background: linear-gradient(135deg, var(--secondary-1) 60%, #f5f7fa 100%); */
     padding: 2rem 1.5rem 1.5rem 1.5rem;
     border-radius: 1.2rem;
     box-shadow: 0 6px 24px rgba(44, 62, 80, 0.15), 0 1.5px 6px rgba(44, 62, 80, 0.08);
@@ -31,6 +30,7 @@
     transition: box-shadow 0.3s, transform 0.3s;
     position: relative;
     overflow: hidden;
+    background-color: var(--background-white);
 }
 .cancha-info-container:hover {
     box-shadow: 0 12px 32px rgba(44, 62, 80, 0.22), 0 2px 8px rgba(44, 62, 80, 0.12);

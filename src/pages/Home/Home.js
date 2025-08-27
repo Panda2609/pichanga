@@ -33,15 +33,16 @@ function Home() {
 
     return (
         <div className="home-container">
-            <div className='logo-container'>
-                <h1 className="logo-title">Pichanga.cl</h1>
+            <div className="home-hero">
+                <div className='logo-container'>
+                    <h1 className="logo-title">Pichanga.cl</h1>
+                </div>
+                <h2 className='subtitle'>Busca y filtra tu cancha ideal</h2>
             </div>
-            <h2 className='subtitle'>Busca y filtra tu cancha ideal</h2>
             <div className="filters-section">
                 <Filter  onFiltrar={handleFiltrar} />
             </div>
             {/* Verify if results are available to show them */}
-            
             {results.length > 0 ? (
                 <div className='result-container'>
                     <div className="results-section">
@@ -50,7 +51,6 @@ function Home() {
                         ))}
                     </div>
                 </div>
-                
             ) : (
                 <p style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>No se encontraron canchas.</p>
             )}

@@ -1,7 +1,8 @@
 .filter-container{
-    background: var(--secondary-1, #cfd8dc);
+    background: var(--background-white);
     padding: 3rem;
     border-radius: var(--rounded-corner-filter);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .filter-form{
@@ -45,4 +46,15 @@
 
 .filter-button:hover {
     background-color: var(--accent-1);
+}
+
+.filter-label {
+    display: flex;
+    /* align-items: start; */
+    justify-content: flex-start;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    padding: 0rem 1rem;
 }

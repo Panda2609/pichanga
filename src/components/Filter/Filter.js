@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './Filter.css';
 import { getRegiones } from '../../api/regionesService';
 import { getTiposCancha } from '../../api/tiposCanchaService';
+import { IoSearch } from "react-icons/io5";
 
 function Filter({ onFiltrar }) {
     const [region, setRegion] = useState('');
     const [tipoCancha, setTipoCancha] = useState('');
-    const [horario, setHorario] = useState('');
     const [fecha, setFecha] = useState('');
     const [regiones, setRegiones] = useState([]);
     const [tiposCanchas, setTiposCanchas] = useState([]);
@@ -16,14 +16,12 @@ function Filter({ onFiltrar }) {
         getTiposCancha().then(data => setTiposCanchas(data)).catch(() => setTiposCanchas([]));
     }, []);
 
-    // console.log('Regiones:', regiones);
-    // console.log('Tipos de Canchas:', tiposCanchas);
     const handleFilter = () => {
         if (typeof onFiltrar === 'function') {
             onFiltrar({
                 region,
                 tipoCancha,
-                horario,
+                // horario,
                 fecha
             });
         }
@@ -32,9 +30,9 @@ function Filter({ onFiltrar }) {
     return (
         <div className="filter-container">
             <form className="filter-form">
-                <label className='filter-label'>
-                    Región:
-                    <select className='filter-select' value={region} onChange={(e) => setRegion(e.target.value)}>
+                <div className='filter-group'>
+                    <label className='filter-label' htmlFor='region-select'>Región</label>
+                    <select id='region-select' className='filter-select' value={region} onChange={(e) => setRegion(e.target.value)}>
                         <option value="">Seleccione una región</option>
                         {regiones.map((region) => (
                             <option key={region.id || region.value} value={region.id || region.value}>
@@ -42,10 +40,10 @@ function Filter({ onFiltrar }) {
                             </option>
                         ))}
                     </select>
-                </label>
-                <label className='filter-label'>
-                    Tipo de Cancha:
-                    <select className='filter-select' value={tipoCancha} onChange={(e) => setTipoCancha(e.target.value)}>
+                </div>
+                <div className='filter-group'>
+                    <label className='filter-label' htmlFor='tipo-select'>Tipo de Cancha</label>
+                    <select id='tipo-select' className='filter-select' value={tipoCancha} onChange={(e) => setTipoCancha(e.target.value)}>
                         <option value="">Seleccione una cancha</option>
                         {tiposCanchas.map((tipo) => (
                             <option key={tipo.id || tipo.value} value={tipo.id || tipo.value}>
@@ -53,16 +51,15 @@ function Filter({ onFiltrar }) {
                             </option>
                         ))}
                     </select>
-                </label>
-                <label className='filter-label'>
-                    Horario:
-                    <input className='filter-input' type="time" value={horario} onChange={(e) => setHorario(e.target.value)} />
-                </label>
-                <label className='filter-label'>
-                    Fecha:
-                    <input className='filter-input' type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
-                </label>
-                <button className='filter-button' type="button" onClick={handleFilter}>Filtrar</button>
+                </div>
+                {/* Se eliminó el campo de horario */}
+                <div className='filter-group'>
+                    <label className='filter-label' htmlFor='fecha-input'>Fecha</label>
+                    <input id='fecha-input' className='filter-input' type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
+                </div>
+                <button className='filter-button' type="button" onClick={handleFilter}>
+                    <IoSearch style={{ fontSize: '1.5em' }} />
+                </button>
             </form>
         </div>
     );
