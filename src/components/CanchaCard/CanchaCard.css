@@ -1,42 +1,83 @@
-.cancha-info-container{
-    background-color: var(--secondary-1);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.cancha-info-top {
     display: flex;
-    flex-direction: column;    
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-}
-
-.cancha-info-details{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    /* justify-content: start; */
-    gap: 0.5rem;
-}
-
-.cancha-img{
     width: 100%;
-    max-width: 400px;
-    /* height: auto; */
-    height: 200px;
-    border-radius: 1rem;
-    object-fit: cover;
-    background: #eee;
-    display: block;
 }
 
-.cancha-title{
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--text-1);
-}
-
-.cancha-info-item{
-    font-size: 1rem;
-    color: var(--text-2);
+.cancha-info-item.cancha-calificacion,
+.cancha-info-item.cancha-precio {
     margin: 0;
 }
+
+.cancha-info-item.cancha-servicios span {
+    margin-right: 0.5em;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+.cancha-info-container {
+    /* background: linear-gradient(135deg, var(--secondary-1) 60%, #f5f7fa 100%); */
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.15), 0 1.5px 6px rgba(44, 62, 80, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    min-width: 320px;
+    max-width: 400px;
+    min-height: 420px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.cancha-info-container:hover {
+    box-shadow: 0 12px 32px rgba(44, 62, 80, 0.22), 0 2px 8px rgba(44, 62, 80, 0.12);
+    transform: translateY(-4px) scale(1.03);
+}
+.cancha-img {
+    width: 100%;
+    max-width: 370px;
+    height: 180px;
+    border-radius: 0.8rem;
+    object-fit: cover;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    display: block;
+    /* margin-bottom: 0.8rem; */
+}
+.cancha-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-1, #2e7d32);
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+.cancha-info-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+}
+.cancha-info-item {
+    font-size: 1.05rem;
+    color: #555;
+    margin: 0;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.6rem;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    
+}
+
+.cancha-calificacion{
+    margin: 0;
+    align-self: flex-start;
+}
+
