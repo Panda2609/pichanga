@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pichanga/static/css/main.29cd4915.css",
+    "main.js": "/pichanga/static/js/main.711c3dd6.js",
+    "static/js/453.4e065e77.chunk.js": "/pichanga/static/js/453.4e065e77.chunk.js",
+    "index.html": "/pichanga/index.html",
+    "main.29cd4915.css.map": "/pichanga/static/css/main.29cd4915.css.map",
+    "main.711c3dd6.js.map": "/pichanga/static/js/main.711c3dd6.js.map",
+    "453.4e065e77.chunk.js.map": "/pichanga/static/js/453.4e065e77.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29cd4915.css",
+    "static/js/main.711c3dd6.js"
+  ]
+}
