@@ -1,7 +1,6 @@
 import './App.css';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 import Navbar from './components/navbar/navbar';
@@ -41,12 +40,10 @@ function App() {
       <Modal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)}>
         <InProgress />
       </Modal>
-      <BrowserRouter>
-        <Routes>
-          {/* Aqui van las rutas, por ejemplo: */}
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        {/* Aqui van las rutas, por ejemplo: */}
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
