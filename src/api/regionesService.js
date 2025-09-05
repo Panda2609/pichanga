@@ -1,15 +1,14 @@
 // Servicio para regiones
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
+const API_URL = "https://backend-466084083507.southamerica-west1.run.app/api/regiones";
+
 export async function getRegiones() {
-  const res = await fetch(`${API_URL}/api/regiones`);
+  const res = await fetch(API_URL);
   if (!res.ok) throw new Error('Error al obtener regiones');
-  const data = await res.json();
-//   console.log("data:", data);
-  return data;
+  return res.json();
 }
 
 export async function getRegionById(id) {
-  const res = await fetch(`${API_URL}/api/regiones/${id}`);
+  const res = await fetch(`${API_URL}/${id}`);
   if (!res.ok) throw new Error('Error al obtener la región');
   return res.json();
 }
